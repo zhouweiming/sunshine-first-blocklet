@@ -22,6 +22,7 @@ function App() {
 export default function WrappedApp() {
   // While the blocklet is deploy to a sub path, this will be work properly.
   const basename = window?.blocklet?.prefix || '/';
+  
 
   return (
     <Router basename={basename}>
