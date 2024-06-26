@@ -1,0 +1,33 @@
+.view-wrapper {
+  /* max-width: 300px; */
+  margin: 0 auto;
+}
+.profile-viewer {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.profile-viewer .row {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.profile-viewer .row .label{
+  width: 100px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.profile-viewer .row .content{
+  flex: 1;
+  text-align: left;
+}
+
+.view-wrapper .opt-wrapper {
+  text-align: right;
+}

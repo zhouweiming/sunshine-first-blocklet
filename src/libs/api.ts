@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Profile } from '../data-types/user';
 
 axios.interceptors.request.use(
   (config) => {
@@ -10,5 +11,15 @@ axios.interceptors.request.use(
   },
   (error) => Promise.reject(error)
 );
+
+export const getProfile = async () => {
+  const result = await axios.get('/api/profile');
+  return result.data;
+};
+
+export const modifyProfile = async (profile: Profile) => {
+  const result = await axios.post('/api/profile', profile);
+  return result.data
+};
 
 export default axios;

@@ -8,6 +8,12 @@ import svgr from 'vite-plugin-svgr';
 export default defineConfig(() => {
   return {
     plugins: [react(), createBlockletPlugin(), svgr()],
+    css: {
+      modules: {
+        // scopeBehaviour: "local",
+        generateScopedName: "[name]_[local]__[hash:base64:5]",
+      }, 
+    },
     build: {
       // 禁止 preload 可以解决 js 的请求没有 referer 的问题
       cssCodeSplit: false,
